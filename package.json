@@ -1,0 +1,62 @@
+{
+  "name": "react-webpack-typescript-starter",
+  "version": "0.1.0",
+  "author": "Adam Groner",
+  "repository": {
+    "type": "git"
+  },
+  "homepage": "https://github.com/vikpe/react-webpack-typescript-starter",
+  "scripts": {
+    "build": "yarn run clean-dist && webpack -p --config=configs/webpack/prod.js",
+    "clean-dist": "rimraf dist/*",
+    "lint": "tslint './src/**/*.ts*' --format stylish --project . --force",
+    "start": "yarn run start-dev",
+    "start-dev": "webpack-dev-server --config=configs/webpack/dev.js --display-error-details",
+    "start-prod": "yarn run build && node server.js",
+    "server": "nodemon server/index.js",
+    "test": "jest --coverage --watchAll --config=configs/jest.json"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@types/jest": "^24.0.22",
+    "@types/node": "^12.12.7",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "classnames": "^2.2.6",
+    "css-loader": "^3.2.0",
+    "csv-loader": "^3.0.2",
+    "express": "^4.17.1",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^6.0.0",
+    "jest": "^24.9.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "natural": "^0.6.3",
+    "nodemon": "^2.0.1",
+    "papaparse": "^5.1.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-hot-loader": "^4.12.17",
+    "react-tooltip": "^3.11.1",
+    "rimraf": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "styled-components": "^4.4.1",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}
