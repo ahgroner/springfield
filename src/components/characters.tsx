@@ -2,7 +2,6 @@ import * as React from "react";
 import CharactersContext from "./../context/characters";
 import { values } from "lodash";
 import CharacterCard from "./character-card";
-import { getCharacters } from "../actions";
 
 import styled from "styled-components";
 import { colors } from "../constants/colors";
@@ -19,11 +18,15 @@ const Wrapper = styled.div`
 interface Props {}
 
 const Characters: React.SFC<Props> = props => {
-  const { characters } = React.useContext(CharactersContext);
+  const { characters, activeCharacter } = React.useContext(CharactersContext);
   return (
     <Wrapper>
       {values(characters).map((c, i) => (
-        <CharacterCard character={c} key={`${c.id}_${i}`} />
+        <CharacterCard
+          character={c}
+          key={`${c.id}_${i}`}
+          active={c.id === activeCharacter}
+        />
       ))}
     </Wrapper>
   );

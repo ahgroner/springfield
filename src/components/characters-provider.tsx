@@ -18,7 +18,8 @@ const CharactersProvider: React.SFC<Props> = props => {
   }, []);
 
   const fetchCharacterData = (id: string) => {
-    if (!!characterData[id]) {
+    console.log(characterData);
+    if (id in characterData) {
       return;
     }
     // fetching
@@ -27,7 +28,7 @@ const CharactersProvider: React.SFC<Props> = props => {
 
     getCharacterData(id).then(data => {
       // fetched
-      setCharacterData({ characterData, [id]: data });
+      setCharacterData({ ...characterData, [id]: data });
     });
   };
   const active = React.useMemo(
