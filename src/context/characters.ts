@@ -4,7 +4,14 @@ import { keyBy, sortBy } from "lodash";
 import moment from "moment";
 import { Character } from "../types";
 
-interface CharacterData {}
+interface IdCountMap {
+  [id: number]: number;
+}
+interface CharacterData {
+  id: string;
+  linesPerEpisode: IdCountMap;
+  linesPerLocation: IdCountMap;
+}
 
 interface CharacterContext {
   characters: Character[];

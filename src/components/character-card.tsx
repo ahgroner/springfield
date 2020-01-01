@@ -29,7 +29,9 @@ const Wrapper = styled.div`
   background-color: transparent;
   ${props => props.active && activeRules}
   &:hover {
-    ${activeRules};
+    img {
+      filter: drop-shadow(0px 0px 20px white);
+    }
   }
 `;
 
