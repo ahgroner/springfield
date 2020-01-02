@@ -1,7 +1,6 @@
 import * as React from "react";
 import EpisodeContext from "./../context/episodes";
 import EpisodeCell from "./episode-cell";
-
 import styled from "styled-components";
 import CharactersContext from "./../context/characters";
 

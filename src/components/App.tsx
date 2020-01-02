@@ -1,12 +1,12 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
 import Episodes from "./episodes";
-import { colors } from "../constants/colors";
 import Characters from "./characters";
 import CharactersProvider from "./characters-provider";
 import ActiveCharacter from "./active-character";
 import GlobalStyle from "./global-style";
 const donut = require("./../assets/img/donut.svg");
+import TopNav from "./top-nav";
 
 class App extends React.Component<{}, undefined> {
   public render() {
@@ -14,7 +14,7 @@ class App extends React.Component<{}, undefined> {
       <div className="app">
         <GlobalStyle />
         <CharactersProvider>
-          {/* <h1>The Simpsons</h1> */}
+          <TopNav />
           <Characters />
           <ActiveCharacter />
 

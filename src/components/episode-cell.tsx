@@ -9,8 +9,8 @@ import { Episode } from "../types";
 const Cell = styled.div`
   width: 24px;
   height: 24px;
-  background: ${colors.yellow};
-  opacity: ${props => (props.active ? 1 : 0.2)};
+  background: ${colors.blue};
+  opacity: ${props => (props.active ? 1 : 0.5)};
   margin: 5px 5px 0 0;
   border-radius: 2px;
 `;

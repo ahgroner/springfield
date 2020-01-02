@@ -10,10 +10,10 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${colors.navy};
-    color: white;
+    background: ${colors.yellow};
     font-family: Helvetica, Arial, sans-serif;
     padding: 0;
     margin: 0;
+    font-family: 'Dosis', sans-serif;
   }
 `;

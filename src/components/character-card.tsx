@@ -2,6 +2,7 @@ import * as React from "react";
 import { Character } from "../types";
 import styled, { css } from "styled-components";
 import CharactersContext from "./../context/characters";
+import { colors } from "../constants/colors";
 
 const charactersPath = require.context("./../assets/img/character", false);
 const keys = charactersPath.keys();
@@ -12,9 +13,10 @@ interface Props {
 }
 
 const activeRules = css`
-  background-color: pink;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
   img {
-    filter: drop-shadow(0px 0px 20px white);
+    filter: drop-shadow(0px 0px 5px white);
   }
 `;
 

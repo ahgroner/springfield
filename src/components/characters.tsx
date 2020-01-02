@@ -7,12 +7,15 @@ import styled from "styled-components";
 import { colors } from "../constants/colors";
 
 const Wrapper = styled.div`
+  height: 200px;
   display: flex;
   flex-flow: row;
-  width: 100%;
+  width: calc(100vw - 64px);
+  margin-left: 32px;
   overflow: auto;
   align-items: baseline;
-  background: ${colors.yellow};
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
 `;
 
 interface Props {}
