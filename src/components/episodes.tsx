@@ -19,12 +19,23 @@ const EpisodesWrapper = styled.div`
   padding: 20px;
 `;
 
-const SeasonHeader = styled.div`
+const Break = styled.div`
   display: flex;
   flex-flow: row;
   flex-grow: 1;
   width: 100%;
   padding: 10px 0 6px 0;
+`;
+
+const SeasonHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-flow: row;
+  text-align: right;
+  width: 24px;
+  height: 24px;
+  margin: 5px 5px 0 0;
 `;
 
 const ToggleItem = styled.div`
@@ -51,9 +62,12 @@ const Episodes: React.SFC<Props> = props => {
           {episodes.map(e => (
             <>
               {bySeason && e.number_in_season === 1 && (
-                <SeasonHeader key={`season_${e.season}`}>
-                  Season {e.season}
-                </SeasonHeader>
+                <>
+                  <Break />
+                  <SeasonHeader key={`season_${e.season}`}>
+                    {e.season}
+                  </SeasonHeader>
+                </>
               )}
               <EpisodeCell
                 episode={e}

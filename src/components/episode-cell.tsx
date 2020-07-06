@@ -21,8 +21,6 @@ export interface Props {
 }
 
 const EpisodeCell: React.SFC<Props> = props => {
-  const episodes = React.useContext(EpisodeContext);
-
   return <Cell active={props.active} />;
 };
 

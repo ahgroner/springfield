@@ -14,14 +14,12 @@ const Wrapper = styled.div`
 `;
 
 const Dismiss = styled.div`
-  font-family: Simpsons;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 1000px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
   margin-left: 16px;
-  color: white;
   font-size: 16px;
   padding: 8px;
   cursor: pointer;
